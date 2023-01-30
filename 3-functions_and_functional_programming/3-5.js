@@ -1,7 +1,11 @@
-const ConstructCounter = (initialValue, incrementBy) => {
-    let value = initialValue
+const ConstructCounter = (initialValue, incrementBy=1) => {
+    let counter = 0
     return {
-        count: () => value += incrementBy
+        count: () => {
+            value = initialValue + incrementBy*counter
+            counter++
+            return value
+        }
     }
 }
 
