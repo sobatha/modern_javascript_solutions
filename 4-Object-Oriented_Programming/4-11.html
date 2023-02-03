@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+<pre class="mermaid">
+classDiagram
+
+SavingsAccount --> BankAccountprototype : prototype
+CheckingAccount --> BankAccountprototype : prototype
+BankAccountprototype : Prototype
+BankAccountprototype : balance
+BankAccountprototype : deposit
+SavingsAccount : static percentOf
+SavingsAccount : addInterest
+CheckingAccount : OVERDRAFT_FEE
+CheckingAccount : FEE
+CheckingAccount : withdraw
+
+</pre>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</body>
+</html>
